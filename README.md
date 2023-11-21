@@ -22,7 +22,46 @@ This is the simplest case. Get the script in whatever way you prefer and include
 <script>
   var player = videojs('my-video');
 
-  player.verse();
+  player.verse(
+        {
+          buttons:[
+            {
+              text: 'Audio y subtítulos',
+              action: 'subtitles',
+              icon: 'subtitles'
+            },
+            {
+              text: 'Bloquear',
+              action: 'lock',
+              icon: 'lock'
+            },
+            {
+              text: 'Velocidad',
+              action: 'speed',
+              icon: 'speed'
+            },
+            {
+              text: 'Episodios',
+              action: 'episodes',
+              icon: 'filter_none'
+            },
+            {
+              text: 'Siguiente episodio',
+              action: 'next',
+              icon: 'skip_next'
+            }
+          ]
+        }
+      );
+
+  player.on('verse.button.subtitles', function() {
+    console.log('verse.button.subtitles fired');
+  });
+
+  player.on('verse.button.lock', function() {
+    console.log('verse.button.lock fired');
+  });
+
 </script>
 ```
 
