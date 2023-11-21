@@ -1,5 +1,5 @@
 {
-  "name": "@vivasoft/videojs-verse",
+  "name": "videojs-verse",
   "version": "0.0.1",
   "description": "VERSE plugin",
   "main": "cjs/plugin.js",

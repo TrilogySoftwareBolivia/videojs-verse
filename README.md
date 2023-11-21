@@ -5,7 +5,7 @@ VERSE plugin
 ## Installation
 
 ```sh
-npm install --save @vivasoft/videojs-verse
+npm install --save videojs-verse
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ var videojs = require('video.js');
 // The actual plugin function is exported by this module, but it is also
 // attached to the `Player.prototype`; so, there is no need to assign it
 // to a variable.
-require('@vivasoft/videojs-verse');
+require('videojs-verse');
 
 var player = videojs('my-video');
 
@@ -48,7 +48,7 @@ player.verse();
 When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
 
 ```js
-require(['video.js', '@vivasoft/videojs-verse'], function(videojs) {
+require(['video.js', 'videojs-verse'], function(videojs) {
   var player = videojs('my-video');
 
   player.verse();
